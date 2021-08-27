@@ -1,0 +1,45 @@
+.articles {
+    background: #ffffff;
+    padding: 65px 0 130px;
+    overflow: hidden;
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    &__card {
+        max-width: 360px;
+        width: 100%;
+        min-height: 508px;
+        padding: 18px 20px;
+        border: 0.5px solid #c4c4c4;
+        background: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0px 1px 12px 0px #a95b5b;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 58px;
+        border-bottom: 4px solid #e30613;
+        display: inline-block;
+    }
+    &__btn {
+        font-size: 16px;
+        line-height: 22px;
+        color: $blue;
+        margin: 14px 0;
+        position: relative;
+        &::after {
+            content: url('../icons/arrow-blue.svg');
+            position: absolute;
+            right: -20px;
+            top: 0;
+        }
+    }
+}

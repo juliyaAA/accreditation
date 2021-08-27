@@ -1,0 +1,240 @@
+@import "variables";
+* {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #191919;
+    box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    background-color: #fff;
+    max-width: 100%;
+    position: relative;
+}
+.container {
+    max-width: 1190px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #191919;
+    transition: 0.5s all;
+    &:hover {
+        color: inherit;
+    }
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+address {
+    padding-bottom: 0;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+button {
+    padding: 0;
+    border-width: 0;
+}
+// доп.стили
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+}
+.margin-top {
+    margin-top: 25px;
+}
+.margin {
+    margin-top: 40px;
+}
+.list {
+    list-style: disc;
+    list-style-position: inside;
+}
+.font-weight {
+    font-weight: 800;
+}
+// header выпадающий список
+.btn-group,
+.btn-group-vertical {
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+}
+.btn {
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 600;
+    color: #191919;
+    border: none;
+    transition: 0.5s all;
+    &:hover {
+        color: $blue;
+    }
+}
+.dropdown-toggle:after {
+    content: url("../icons/arrow_down.svg");
+    font-size: 0;
+    margin-left: 11px;
+}
+.btn-group:hover {
+    box-shadow: none;
+}
+// block__gallery
+.carousel-control-next-icon:after {
+    content: url("../icons/arrow-right.svg");
+    color: #fff;
+}
+.carousel-control-prev-icon:after {
+    content: url("../icons/arrow-left.svg");
+    color: #fff;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    width: 5%;
+    opacity: 1;
+}
+.country {
+    float: right;
+    &::after {
+        content: "";
+        clear: both;
+    }
+}
+.count {
+    padding: 3px 7px;
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+}
+.float {
+    float: inherit;
+    display: flex;
+    flex-wrap: wrap;
+}
+// new
+.component {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 2px 6px;
+    margin-top: 14px;
+}
+.purple {
+    background: #bb6bd9;
+    color: #fff;
+}
+.yellow {
+    background: #f2c94c;
+    &:hover {
+        color: #fff;
+    }
+}
+.orange {
+    background: #f2994a;
+    &:hover {
+        color: #fff;
+    }
+}
+.green {
+    background: #27ae60;
+    color: #fff;
+}
+.blue {
+    background: $blue;
+    color: #fff;
+}
+.crimson {
+    background: #eb5757;
+    color: #fff;
+}
+.link {
+    font-size: 16px;
+    text-align: center;
+    color: $blue;
+    display: block;
+}
+// articles cards
+.card {
+    margin-top: 16px;
+    &-body {
+        padding: 0;
+        > a {
+            margin-right: 20px;
+            margin-top: 0;
+        }
+    }
+    &-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+        margin-top: 18px;
+    }
+    &-text {
+        font-size: 16px;
+        line-height: 22px;
+        color: $grey;
+        margin-top: 16px;
+    }
+}
+.arrow::after {
+    content: url("../icons/arrow-interfacs.svg");
+    position: absolute;
+    right: 45px;
+    top: -2px;
+}
+#scrollup {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    border-radius: 50%;
+    background-color: $grey;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    z-index: 100;
+    &::after {
+        content: url("../icons/ar-app.svg");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:hover {
+        background-color: #a05a71;   
+    }
+}
+.burger-menu {
+    display: none;
+}
+@import "header";
+@import "carousel";
+@import "social";
+@import "block";
+@import "red";
+@import "contact";
+@import "new";
+@import "slider";
+@import "articles";
+@import "footer";
+@import "media";
